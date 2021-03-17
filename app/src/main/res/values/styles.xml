@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FormButton" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:colorButtonNormal">#FFF</item>
+
+    </style>
+
+</resources>

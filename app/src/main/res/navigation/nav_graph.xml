@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/housingFeedFragment">
+
+    <fragment
+        android:id="@+id/housingFeedFragment"
+        android:name="com.android.example.housingconnect.HousingFeedFragment"
+        android:label="fragment_housing_feed"
+        tools:layout="@layout/fragment_housing_feed" >
+        <action
+            android:id="@+id/action_housingFeedFragment_to_formLocationFragment"
+            app:destination="@id/formLocationFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_housingFeedFragment_to_signInFragment2"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_housingFeedFragment_to_housingDisplayFragment"
+            app:destination="@id/housingDisplayFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/formLocationFragment"
+        android:name="com.android.example.housingconnect.FormLocationFragment"
+        android:label="fragment_form_location"
+        tools:layout="@layout/fragment_form_location" >
+        <action
+            android:id="@+id/action_formLocationFragment_to_formDetailsFragment"
+            app:destination="@id/formDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.android.example.housingconnect.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_formLocationFragment"
+            app:destination="@id/formLocationFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/housingDisplayFragment"
+        android:name="com.android.example.housingconnect.HousingDisplayFragment"
+        android:label="fragment_housing_display"
+        tools:layout="@layout/fragment_housing_display" >
+        <argument
+            android:name="post"
+            app:argType="com.android.example.housingconnect.Post" />
+    </fragment>
+    <fragment
+        android:id="@+id/formDetailsFragment"
+        android:name="com.android.example.housingconnect.FormDetailsFragment"
+        android:label="fragment_form_details"
+        tools:layout="@layout/fragment_form_details" >
+        <action
+            android:id="@+id/action_formDetailsFragment_to_formDescriptionFragment"
+            app:destination="@id/formDescriptionFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left" />
+        <argument
+            android:name="post"
+            app:argType="com.android.example.housingconnect.Post" />
+    </fragment>
+    <fragment
+        android:id="@+id/formDescriptionFragment"
+        android:name="com.android.example.housingconnect.FormDescriptionFragment"
+        android:label="fragment_form_description"
+        tools:layout="@layout/fragment_form_description" >
+        <action
+            android:id="@+id/action_formDescriptionFragment_to_formImageFragment"
+            app:destination="@id/formImageFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left" />
+        <argument
+            android:name="post"
+            app:argType="com.android.example.housingconnect.Post" />
+    </fragment>
+    <fragment
+        android:id="@+id/formImageFragment"
+        android:name="com.android.example.housingconnect.FormImageFragment"
+        android:label="fragment_form_image"
+        tools:layout="@layout/fragment_form_image" >
+        <action
+            android:id="@+id/action_formImageFragment_to_housingFeedFragment"
+            app:destination="@id/housingFeedFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="post"
+            app:argType="com.android.example.housingconnect.Post" />
+    </fragment>
+</navigation>
